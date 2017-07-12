@@ -1,3 +1,6 @@
-print("Log In With First and Last Name")
+from disk import checkin
 
-name = input()
+name = input("Log In With First and Last Name\n")
+
+checkin(name)
+
