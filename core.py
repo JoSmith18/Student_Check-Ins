@@ -1,18 +1,19 @@
-from disk import checklog, check_for_day, check_for_student
+from disk import loadcheckin
 
-def action():
-        checklog()
+
 def check_day(day):
-    check_for_day(day)
+    checkin = loadcheckin()
     times = []
-    for item in check_in:
+    for item in checkin:
         if  item[0] == day:
-            return item
+            times.append(item)
+    return times
 def check_student(student):
-    check_for_student(student)
+    checkin = loadcheckin()
     times = []
-    for item in check_in:
-        if  item[1] == day:
-            return item
+    for item in checkin:
+        if  item[1] == student:
+            times.append(item)
+    return times
  
 
