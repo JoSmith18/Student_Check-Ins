@@ -1,5 +1,5 @@
 from disk import checklog
-from core import action, check_day,check_student
+from core import check_day,check_student
 teacher = input("Which Instructor Will Check Today\n")
 
 print('Hello Mr.{} What Will You Be Checking Today?\n'.format(teacher))
@@ -12,11 +12,11 @@ decision = '''
 choice = input(decision) 
 
 if choice == '1':
-    action()
+    checklog()
 elif choice == '2':
     day = input("What Day Would You Like To Check\n")
-    check_day(day)
+    print(check_day(day))
 elif choice == '3':
-    student = input("Which Student Would You Like To See")
-    check_student(student)
+    student = input("Which Student Would You Like To See\n")
+    print(check_student(student))
 
