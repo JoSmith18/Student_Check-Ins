@@ -17,3 +17,12 @@ def check_for_day(day):
     for item in check_in:
         if  item[0] == day
     return item
+
+def check_for_student(student):
+    with open("checkins.txt", "r") as log:
+        log.readline()
+        check_in = log.readlines()
+    times = []
+    for item in check_in:
+        if  item[1] == day
+    return item
