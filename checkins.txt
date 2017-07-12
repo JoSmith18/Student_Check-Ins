@@ -1,2 +1,4 @@
 Date, Name, Time
-
+2017-07-12, Jo'Tavious Smith, 10:52:15.320528
+2017-07-12, Shedlia Freeman, 10:57:25.237468
+2017-07-12, Asia Green, 10:57:33.874448
