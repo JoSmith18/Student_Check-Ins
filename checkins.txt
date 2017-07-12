@@ -1,2 +1,2 @@
-Date and Time, Student Name
-2017-07-12 09:14:40.489068, Jo'Tavious Smith
+Date, Name, Time
+
