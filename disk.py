@@ -9,15 +9,16 @@ def checklog():
     with open("checkins.txt", "r") as file:
         print(file.read())
 
-def check_for_day(day):
+def loadcheckin():
     with open("checkins.txt", "r") as log:
         log.readline()
         check_in = log.readlines()
-    return check_in
+    inventory = []
+    for item in check_in:
+        sub_list = item.split(', ')
+        inventory.append([sub_list[0], sub_list[1], sub_list[2]])
+    return inventory
+
  
-def check_for_student(student):
-    with open("checkins.txt", "r") as log:
-        log.readline()
-        check_in = log.readlines()
-    return check_in
+
     
