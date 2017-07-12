@@ -22,7 +22,19 @@ def loadcheckin():
 def loadstudents():
     with open("student.txt", "r") as log:
         log.readline()
-        return ' '.join(log.readlines())
+        return (log.readlines().split())
+
+def valid_student():
+    with open("student.txt", "r") as log:
+        log.readline()
+        check_in = log.readlines()
+    students = []
+    for item in check_in:
+        sub_list = item.split(', ')
+        inventory.append(sub_list[0])
+    return students
+
+
 
  
 

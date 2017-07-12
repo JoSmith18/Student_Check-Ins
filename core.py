@@ -16,4 +16,10 @@ def check_student(student):
             times.append(item)
     return times
  
-
+def verifystudents(name):
+    checkin = loadcheckin()
+    times = []
+    for item in checkin:
+        if  item[0] != name:
+            return(quit)
+            
