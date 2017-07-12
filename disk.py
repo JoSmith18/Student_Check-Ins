@@ -19,6 +19,11 @@ def loadcheckin():
         inventory.append([sub_list[0], sub_list[1], sub_list[2]])
     return inventory
 
+def loadstudents():
+    with open("student.txt", "r") as log:
+        log.readline()
+        return ' '.join(log.readlines())
+
  
 
     

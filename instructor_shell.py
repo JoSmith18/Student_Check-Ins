@@ -1,4 +1,4 @@
-from disk import checklog
+from disk import checklog, loadstudents
 from core import check_day,check_student
 teacher = input("Which Instructor Will Check Today\n")
 
@@ -14,9 +14,12 @@ choice = input(decision)
 if choice == '1':
     checklog()
 elif choice == '2':
+    checklog()
     day = input("What Day Would You Like To Check\n")
     print(check_day(day))
 elif choice == '3':
+    print(loadstudents())
     student = input("Which Student Would You Like To See\n")
     print(check_student(student))
-
+else:
+    print("Invalid Start Over")
