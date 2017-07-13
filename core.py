@@ -8,6 +8,7 @@ def check_day(day):
         if  item[0] == day:
             times.append(item)
     return times
+
 def check_student(student):
     checkin = loadcheckin()
     times = []

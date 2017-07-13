@@ -15,7 +15,7 @@ def input_choice():
             print('Invalid Try Again')
 
 def main():
-    teacher = input("Which Instructor Will Check Today\n")
+    teacher = input("Who Will Check Today?\n")
 
     print('Hello Mr.{} What Will You Be Checking Today?\n'.format(teacher))
 
@@ -23,18 +23,15 @@ def main():
     choice = input_choice() 
 
     if choice == '1':
-        checklog()
+        print(checklog())
     elif choice == '2':
-        checklog()
+        print(checklog())
         day = input("What Day Would You Like To Check\n")
         print(check_day(day))
     elif choice == '3':
         print(loadstudents())
         student = input("Which Student Would You Like To See\n")
         print(check_student(student))
-    else:
-        print("Invalid Start Over")
-
 
 if __name__ == '__main__':
     main()

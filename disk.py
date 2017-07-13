@@ -7,7 +7,7 @@ def checkin(name):
 
 def checklog():
     with open("checkins.txt", "r") as file:
-        print(file.read())
+        return file.read()
 
 def loadcheckin():
     with open("checkins.txt", "r") as log:
@@ -16,7 +16,7 @@ def loadcheckin():
     inventory = []
     for item in check_in:
         sub_list = item.split(', ')
-        inventory.append([sub_list[0], sub_list[1], sub_list[2]])
+        inventory.append([sub_list[0].strip(), sub_list[1].strip(), sub_list[2].strip()])
     return inventory
 
 def loadstudents():
