@@ -1,4 +1,4 @@
-from disk import checklog, loadstudents,loadcheckin
+from disk import load_student,loadcheckin
 from core import check_day,check_student
 
 def input_choice():
@@ -14,24 +14,40 @@ def input_choice():
         else:
             print('Invalid Try Again')
 
+def showcheckins(checkins):
+    str = ''
+    for item in checkins:
+        str +=' - '.join(item) + '\n'
+    return str
+
+def showstudents(student):
+    str = ''
+    for item in student:
+        str += item + '\n'
+    return str
+
 def main():
     teacher = input("Who Will Check Today?\n")
     
     print('Hello Mr.{} What Will You Be Checking Today?\n'.format(teacher))    
     
     choice = input_choice() 
-    checkins = loadcheckins()
+    checkins = loadcheckin()
+    student = load_student()
 
     if choice == '1':
-        print(checklog())
+        print(showcheckins(checkins))
+    
     elif choice == '2':
-        print(checklog())
+        print(showcheckins(checkins))
         day = input("What Day Would You Like To Check\n")
         print(check_day(checkins, day))
+    
     elif choice == '3':
-        print(loadstudents())
+        print(showstudents(student))
         student = input("Which Student Would You Like To See\n")
-        print(check_student(student))
+        print(check_student(checkins, student))
 
 if __name__ == '__main__':
     main()
+    

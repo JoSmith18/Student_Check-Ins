@@ -12,3 +12,5 @@ Date, Name, Time
 2017-07-13, Shedlia Freeman, 08:37:32.313798
 2017-07-13, Jo'Tavious Smith, 08:46:40.796507
 2017-07-13, Shedlia Freeman, 08:48:01.963545
+2017-07-13, Jo'Tavious Smith, 10:22:47.760978
+2017-07-13, Jo'Tavious Smith, 10:50:48.465239

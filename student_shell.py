@@ -1,10 +1,11 @@
-from disk import checkin
+from disk import checkin, load_student
 from core import verifystudents
 
 def input_name():
     while True:
         name = input("Log In With First and Last Name\n").title()
-        if verifystudents(name):
+        valid = load_student()
+        if verifystudents(valid, name):
             return name
         else:
             print('Invalid name')
