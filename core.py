@@ -1,4 +1,4 @@
-from disk import loadcheckin
+from disk import loadcheckin, valid_student
 
 
 def check_day(day):
@@ -17,9 +17,6 @@ def check_student(student):
     return times
  
 def verifystudents(name):
-    checkin = loadcheckin()
-    times = []
-    for item in checkin:
-        if  item[0] != name:
-            return(quit)
+    return name in valid_student()
+        
             
