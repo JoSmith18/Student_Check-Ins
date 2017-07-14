@@ -4,15 +4,15 @@ from disk import loadcheckin
 def check_day(checkin, day):
     '''
     >>> check_day([], '2017-07-12')
-    []
+    ''
     >>> check_day([['2017-07-12', 'name', 'time']], '2017-07-12')
-    [['2017-07-12', 'name', 'time']]
+    '2017-07-12', 'name', 'time'
     >>> check_day([['2017-07-12', 'name', 'time']], '2017-07-13')
-    []
+    ''
     >>> check_day([['2017-07-12', 'name', 'time'], ['2017-07-12', 'James', 'time']], '2017-07-12')
-    [['2017-07-12', 'name', 'time'], ['2017-07-12', 'James', 'time']]
+    '2017-07-12, name, time\\n2017-07-13, name, time\\n'
     >>> check_day([['2017-07-12', 'name', 'time'], ['2017-07-12', 'James', 'time'], ['2017-07-13', 'name', 'time']], '2017-07-12')
-    [['2017-07-12', 'name', 'time'], ['2017-07-12', 'James', 'time']]
+    '2017-07-12, name, time\\n2017-07-13, name, time\\n'
     '''
     times = ''
     for item in checkin:
@@ -56,6 +56,12 @@ def verifystudents(validstudent, name):
         return True
     else:
         return False
+
+
+        
+
+
+    
 
 
         
