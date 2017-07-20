@@ -7,12 +7,13 @@ def checkin(name):
 
 def loadcheckin():
     with open("checkins.txt", "r") as log:
-        log.readline()
+        key_1, key_2, key_3 = log.readline().strip().split(', ')
         check_in = log.readlines()
     inventory = []
     for item in check_in:
-        sub_list = item.split(', ')
-        inventory.append([sub_list[0].strip(), sub_list[1].strip(), sub_list[2].strip()])
+        date, name, time = item.strip().split(', ')
+        d = {key_1: date, key_2: name, key_3: time}
+        inventory.append(d)
     return inventory
 
 def load_student():
